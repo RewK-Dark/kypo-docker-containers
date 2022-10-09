@@ -16,6 +16,7 @@ routers:
 networks:
   - name: switch
     cidr: 10.10.30.0/24
+    accessible_by_user: False
 
 net_mappings:
     - host: deb
