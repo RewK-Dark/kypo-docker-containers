@@ -8,12 +8,6 @@ container_mappings:
   - container: home-docker
     host: deb
     port: 2222
-  - container: home-docker
-    host: deb2
-    port: 2222
-  - container: home-docker2
-    host: deb
-    port: 2223
   - container: home-docker2
     host: deb2
     port: 2223
