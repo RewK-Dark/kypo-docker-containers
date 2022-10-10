@@ -6,7 +6,11 @@ hosts:
       image: debian-11-x86_64
       mgmt_user: debian
     flavor: csirtmu.medium4x8
-    hidden: True
+  - name: deb2
+    base_box:
+      image: debian-11-x86_64
+      mgmt_user: debian
+    flavor: csirtmu.medium4x8
 routers:
   - name: router
     base_box:
@@ -22,6 +26,9 @@ net_mappings:
     - host: deb
       network: switch
       ip: 10.10.30.5
+    - host: deb2
+      network: switch
+      ip: 10.10.30.6
 
 router_mappings:
     - router: router
@@ -33,3 +40,4 @@ groups:
     nodes:
       - router
       - deb
+      - deb2
