@@ -6,6 +6,7 @@ hosts:
       image: debian-11-x86_64
       mgmt_user: debian
     flavor: csirtmu.medium4x8
+    hidden: True
 routers:
   - name: router
     base_box:
@@ -16,7 +17,6 @@ routers:
 networks:
   - name: switch
     cidr: 10.10.30.0/24
-    accessible_by_user: False
 
 net_mappings:
     - host: deb
