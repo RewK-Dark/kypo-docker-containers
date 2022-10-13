@@ -6,11 +6,6 @@ hosts:
       image: debian-11-x86_64
       mgmt_user: debian
     flavor: csirtmu.medium4x8
-  - name: deb2
-    base_box:
-      image: debian-11-x86_64
-      mgmt_user: debian
-    flavor: csirtmu.medium4x8
 routers:
   - name: router
     base_box:
@@ -19,31 +14,21 @@ routers:
     flavor: csirtmu.tiny1x2
 
 networks:
-  - name: switch-visible
+  - name: switch
     cidr: 10.10.30.0/24
-  - name: switch-invisible
-    cidr: 10.10.31.0/24
-    accessible_by_user: False
 
 net_mappings:
     - host: deb
-      network: switch-visible
+      network: switch
       ip: 10.10.30.5
-    - host: deb2
-      network: switch-invisible
-      ip: 10.10.31.5
 
 router_mappings:
     - router: router
-      network: switch-visible
+      network: switch
       ip: 10.10.30.1
-    - router: router
-      network: switch-invisible
-      ip: 10.10.31.1
 
 groups:
   - name: linux-machines
     nodes:
       - router
       - deb
-      - deb2
