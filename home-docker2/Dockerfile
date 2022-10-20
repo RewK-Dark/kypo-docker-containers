@@ -5,5 +5,6 @@ touch test_file.txt; apt install -y python3 && apt install -y python3-pip && \
 python3 -m pip install --user ansible
 
 ENV PATH="${PATH}:/root/.local/bin"
+ENT TESTVAR="thisVarWasSet"
 
 RUN export PATH
