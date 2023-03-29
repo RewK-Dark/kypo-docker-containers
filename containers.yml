@@ -11,3 +11,4 @@ container_mappings:
   - container: home-docker2
     host: deb
     port: 2223
+    hidden: True
