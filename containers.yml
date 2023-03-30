@@ -13,4 +13,4 @@ container_mappings:
     port: 2223
     hidden: True
     
-hide-all: True
+hide_all: True
