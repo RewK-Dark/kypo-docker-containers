@@ -12,3 +12,5 @@ container_mappings:
     host: deb
     port: 2223
     hidden: True
+    
+hide-all: True
