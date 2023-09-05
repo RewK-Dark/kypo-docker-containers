@@ -5,7 +5,7 @@ hosts:
     base_box:
       image: debian-11-x86_64
       mgmt_user: debian
-    flavor: csirtmu.medium4x8
+    flavor: standard.medium
 routers:
   - name: router
     base_box:
