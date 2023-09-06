@@ -3,7 +3,7 @@ name: general-testing-definition
 hosts:
   - name: deb
     base_box:
-      image: debian-9-x86_64
+      image: debian-11-x86_64
       mgmt_user: debian
     flavor: standard.medium
 routers:
