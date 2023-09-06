@@ -3,8 +3,8 @@ name: general-testing-definition
 hosts:
   - name: deb
     base_box:
-      image: ubuntu-focal-x86_64
-      mgmt_user: ubuntu
+      image: debian-9-x86_64
+      mgmt_user: debian
     flavor: standard.medium
 routers:
   - name: router
